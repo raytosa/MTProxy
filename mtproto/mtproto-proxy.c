@@ -68,7 +68,7 @@
 #define COMMIT "unknown"
 #endif
 
-#define VERSION_STR	"mtproxy-0.01"
+#define VERSION_STR	"gtp-0.01"		/////yhb	#define VERSION_STR	"mtproxy-0.01"
 const char FullVersionStr[] = VERSION_STR " compiled at " __DATE__ " " __TIME__ " by gcc " __VERSION__ " "
 #ifdef __LP64__
   "64-bit"
