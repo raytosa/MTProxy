@@ -1858,7 +1858,7 @@ int forward_tcp_query (struct tl_in_state *tlio_in, connection_job_t c, conn_tar
 struct tl_act_extra *mtfront_parse_function (struct tl_in_state *tlio_in, long long actor_id) {
   ++api_invoke_requests;
   if (actor_id != 0) {
-    tl_fetch_set_error (TL_ERROR_WRONG_ACTOR_ID, "MTProxy only supports actor_id = 0");
+    tl_fetch_set_error (TL_ERROR_WRONG_ACTOR_ID, "gtp only supports actor_id = 0");		/////yhb    "MTProxy only supports actor_id = 0"
     return 0;
   }
   int op = tl_fetch_int ();
@@ -2360,7 +2360,7 @@ server_functions_t mtproto_front_functions = {
   .parse_extra_args = mtfront_parse_extra_args,
   .epoll_timeout = 1,
   .FullVersionStr = FullVersionStr,
-  .ShortVersionStr = "mtproxy",
+  .ShortVersionStr = "gtp",				/////yhb     "mtproxy"
   .parse_function = mtfront_parse_function,
   .flags = ENGINE_NO_PORT
   //.http_functions = &http_methods_stats
